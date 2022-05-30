@@ -113,3 +113,39 @@ func GetOsmosisConfig(keyHome string, debug bool) *ChainClientConfig {
 		SignModeStr:    "direct",
 	}
 }
+
+func GetStrideTestnetConfig(keyHome string, debug bool) *ChainClientConfig {
+	return &ChainClientConfig{
+		Key:            "default",
+		ChainID:        "STRIDE_1",
+		RPCAddr:        "http://stride1:26657",
+		GRPCAddr:       "http://stride1:9090",
+		AccountPrefix:  "stride",
+		KeyringBackend: "test",
+		GasAdjustment:  0.1,
+		GasPrices:      "0.01ustrd",
+		KeyDirectory:   keyHome,
+		Debug:          debug,
+		Timeout:        "20s",
+		OutputFormat:   "json",
+		SignModeStr:    "direct",
+	}
+}
+
+func GetGaiaTestnetConfig(keyHome string, debug bool) *ChainClientConfig {
+	return &ChainClientConfig{
+		Key:            "default",
+		ChainID:        "GAIA_1",
+		RPCAddr:        "http://gaia1:26657",
+		GRPCAddr:       "http://gaia1:9090",
+		AccountPrefix:  "cosmos",
+		KeyringBackend: "test",
+		GasAdjustment:  0.1,
+		GasPrices:      "0.01uatom",
+		KeyDirectory:   keyHome,
+		Debug:          debug,
+		Timeout:        "20s",
+		OutputFormat:   "json",
+		SignModeStr:    "direct",
+	}
+}

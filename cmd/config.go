@@ -83,8 +83,10 @@ func defaultConfig(keyHome string, debug bool) []byte {
 	return Config{
 		DefaultChain: "cosmoshub",
 		Chains: map[string]*client.ChainClientConfig{
-			"cosmoshub": client.GetCosmosHubConfig(keyHome, debug),
-			"osmosis":   client.GetOsmosisConfig(keyHome, debug),
+			"cosmoshub":      client.GetCosmosHubConfig(keyHome, debug),
+			"osmosis":        client.GetOsmosisConfig(keyHome, debug),
+			"stride-testnet": client.GetStrideTestnetConfig(keyHome, debug),
+			"gaia-testnet":   client.GetGaiaTestnetConfig(keyHome, debug),
 		},
 	}.MustYAML()
 }
