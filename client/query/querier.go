@@ -258,7 +258,6 @@ func (q *Query) Ibc_ClientState(clientId string) (*clienttypes.QueryClientStateR
 func (q *Query) Ibc_ClientStates() (*clienttypes.QueryClientStatesResponse, error) {
 	/// TODO: In the future have some logic to route the query to the appropriate client (gRPC or RPC)
 	return ibc_ClientStatesRPC(q)
-	//
 }
 
 // Ibc_ConsensusState returns the consensus state for the specified IBC client and the given height.
