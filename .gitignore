@@ -1,0 +1,9 @@
+.idea/
+vendor/
+build/
+*.json
+.DS_Store
+
+# If anyone runs "go build .", ignore the resulting binary.
+lens
+lens.exe
