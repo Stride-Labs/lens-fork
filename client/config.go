@@ -80,7 +80,7 @@ func (ccc *ChainClientConfig) Validate() error {
 
 func GetCosmosHubConfig(keyHome string, debug bool) *ChainClientConfig {
 	return &ChainClientConfig{
-		Key:            "default",
+		Key:            "notdefault",
 		ChainID:        "cosmoshub-4",
 		RPCAddr:        "https://cosmoshub-4.technofractal.com:443",
 		GRPCAddr:       "https://gprc.cosmoshub-4.technofractal.com:443",
@@ -98,7 +98,7 @@ func GetCosmosHubConfig(keyHome string, debug bool) *ChainClientConfig {
 
 func GetOsmosisConfig(keyHome string, debug bool) *ChainClientConfig {
 	return &ChainClientConfig{
-		Key:            "default",
+		Key:            "notdefault",
 		ChainID:        "osmosis-1",
 		RPCAddr:        "https://osmosis-1.technofractal.com:443",
 		GRPCAddr:       "https://gprc.osmosis-1.technofractal.com:443",
