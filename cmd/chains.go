@@ -244,7 +244,7 @@ func cmdChainsSetDefault(a *appState) *cobra.Command {
 func cmdChainsShowDefault(a *appState) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:     "show-default",
-		Aliases: []string{"d", "default"},
+		Aliases: []string{"d", "test"},
 		Short:   "show the configured default chain",
 		Args:    cobra.NoArgs,
 		RunE: func(cmd *cobra.Command, args []string) error {

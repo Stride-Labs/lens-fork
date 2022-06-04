@@ -116,7 +116,7 @@ func GetOsmosisConfig(keyHome string, debug bool) *ChainClientConfig {
 
 func GetStrideTestnetConfig(keyHome string, debug bool) *ChainClientConfig {
 	return &ChainClientConfig{
-		Key:            "default",
+		Key:            "test",
 		ChainID:        "STRIDE_1",
 		RPCAddr:        "http://stride1:26657",
 		GRPCAddr:       "http://stride1:9090",
@@ -134,7 +134,7 @@ func GetStrideTestnetConfig(keyHome string, debug bool) *ChainClientConfig {
 
 func GetGaiaTestnetConfig(keyHome string, debug bool) *ChainClientConfig {
 	return &ChainClientConfig{
-		Key:            "default",
+		Key:            "test",
 		ChainID:        "GAIA_1",
 		RPCAddr:        "http://gaia1:26657",
 		GRPCAddr:       "http://gaia1:9090",

@@ -81,12 +81,12 @@ func (c Config) MustYAML() []byte {
 
 func defaultConfig(keyHome string, debug bool) []byte {
 	return Config{
-		DefaultChain: "stride-testnet",
+		DefaultChain: "A",
 		Chains: map[string]*client.ChainClientConfig{
-			"stride-testnet": client.GetStrideTestnetConfig(keyHome, debug),
-			"gaia-testnet":   client.GetGaiaTestnetConfig(keyHome, debug),
-			"cosmoshub":      client.GetCosmosHubConfig(keyHome, debug),
-			"osmosis":        client.GetOsmosisConfig(keyHome, debug),
+			"A": client.GetStrideTestnetConfig(keyHome, debug),
+			"B":   client.GetGaiaTestnetConfig(keyHome, debug),
+			// "cosmoshub":      client.GetCosmosHubConfig(keyHome, debug),
+			// "osmosis":        client.GetOsmosisConfig(keyHome, debug),
 		},
 	}.MustYAML()
 }
