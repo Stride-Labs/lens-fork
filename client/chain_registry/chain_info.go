@@ -205,7 +205,7 @@ func (c ChainInfo) GetChainConfig(ctx context.Context) (*client.ChainClientConfi
 	}
 
 	return &client.ChainClientConfig{
-		Key:            "default",
+		Key:            "test",
 		ChainID:        c.ChainID,
 		RPCAddr:        rpc,
 		AccountPrefix:  c.Bech32Prefix,
