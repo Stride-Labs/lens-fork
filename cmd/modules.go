@@ -1,6 +1,7 @@
 package cmd
 
 import (
+	"github.com/Stride-Labs/stride/x/interchainquery"
 	"github.com/cosmos/cosmos-sdk/types/module"
 	"github.com/cosmos/cosmos-sdk/x/auth"
 	authz "github.com/cosmos/cosmos-sdk/x/authz/module"
@@ -45,4 +46,5 @@ var ModuleBasics = []module.AppModuleBasic{
 	upgrade.AppModuleBasic{},
 	transfer.AppModuleBasic{},
 	ibc.AppModuleBasic{},
+	interchainquery.AppModuleBasic{},
 }

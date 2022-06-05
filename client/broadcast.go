@@ -15,6 +15,7 @@ import (
 )
 
 const (
+	// TODO this was previously 10 minutes
 	defaultBroadcastWaitTimeout = 1 * time.Minute
 )
 
