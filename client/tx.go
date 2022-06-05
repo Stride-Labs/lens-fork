@@ -52,6 +52,8 @@ func (cc *ChainClient) SendMsg(ctx context.Context, msg sdk.Msg) (*sdk.TxRespons
 // of that transaction will be logged. A boolean indicating if a transaction was successfully
 // sent and executed successfully is returned.
 func (cc *ChainClient) SendMsgs(ctx context.Context, msgs []sdk.Msg) (*sdk.TxResponse, error) {
+	panic("LENS | TOP")
+
 	txf, err := cc.PrepareFactory(cc.TxFactory())
 	if err != nil {
 		return nil, err
