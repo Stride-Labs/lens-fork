@@ -57,6 +57,8 @@ func (cc *ChainClient) SendMsgs(ctx context.Context, msgs []sdk.Msg) (*sdk.TxRes
 		return nil, err
 	}
 
+	panic("LENS | FACTORY PREPARED")
+
 	// TODO: Make this work with new CalculateGas method
 	// TODO: This is related to GRPC client stuff?
 	// https://github.com/cosmos/cosmos-sdk/blob/5725659684fc93790a63981c653feee33ecf3225/client/tx/tx.go#L297
@@ -64,6 +66,8 @@ func (cc *ChainClient) SendMsgs(ctx context.Context, msgs []sdk.Msg) (*sdk.TxRes
 	if err != nil {
 		return nil, err
 	}
+
+	panic("LENS | GAS CALCULATED")
 
 	// Set the gas amount on the transaction factory
 	txf = txf.WithGas(adjusted)
@@ -95,6 +99,8 @@ func (cc *ChainClient) SendMsgs(ctx context.Context, msgs []sdk.Msg) (*sdk.TxRes
 		return nil, err
 	}
 
+	panic("LENS | TX UNSIGNED BUILT")
+
 	// Generate the transaction bytes
 	txBytes, err := cc.Codec.TxConfig.TxEncoder()(txb.GetTx())
 	if err != nil {
@@ -106,6 +112,8 @@ func (cc *ChainClient) SendMsgs(ctx context.Context, msgs []sdk.Msg) (*sdk.TxRes
 	if err != nil {
 		return nil, err
 	}
+
+	panic("LENS | TX BROADCASTED")
 
 	// transaction was executed, log the success or failure using the tx response code
 	// NOTE: error is nil, logic should use the returned error to determine if the
