@@ -15,7 +15,7 @@ import (
 )
 
 const (
-	defaultBroadcastWaitTimeout = 10 * time.Minute
+	defaultBroadcastWaitTimeout = 1 * time.Minute
 )
 
 func (cc *ChainClient) BroadcastTx(ctx context.Context, tx []byte) (*sdk.TxResponse, error) {
@@ -32,6 +32,8 @@ func (cc *ChainClient) BroadcastTx(ctx context.Context, tx []byte) (*sdk.TxRespo
 			return nil, err
 		}
 	}
+
+	// panic("BROADCASTTX | BEFORE BROADCAST")
 
 	return broadcastTx(
 		ctx,
