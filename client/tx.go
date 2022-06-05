@@ -52,14 +52,14 @@ func (cc *ChainClient) SendMsg(ctx context.Context, msg sdk.Msg) (*sdk.TxRespons
 // of that transaction will be logged. A boolean indicating if a transaction was successfully
 // sent and executed successfully is returned.
 func (cc *ChainClient) SendMsgs(ctx context.Context, msgs []sdk.Msg) (*sdk.TxResponse, error) {
-	panic("LENS | TOP")
+	// panic("LENS | TOP")
 
 	txf, err := cc.PrepareFactory(cc.TxFactory())
 	if err != nil {
 		return nil, err
 	}
 
-	panic("LENS | FACTORY PREPARED")
+	// panic("LENS | FACTORY PREPARED")
 
 	// TODO: Make this work with new CalculateGas method
 	// TODO: This is related to GRPC client stuff?
@@ -69,7 +69,7 @@ func (cc *ChainClient) SendMsgs(ctx context.Context, msgs []sdk.Msg) (*sdk.TxRes
 		return nil, err
 	}
 
-	panic("LENS | GAS CALCULATED")
+	// panic("LENS | GAS CALCULATED")
 
 	// Set the gas amount on the transaction factory
 	txf = txf.WithGas(adjusted)
