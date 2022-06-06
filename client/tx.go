@@ -69,6 +69,9 @@ func (cc *ChainClient) SendMsgs(ctx context.Context, msgs []sdk.Msg) (*sdk.TxRes
 		return nil, err
 	}
 
+	// TODO remove this
+	adjusted = 500000
+
 	// panic("LENS | GAS CALCULATED")
 
 	// Set the gas amount on the transaction factory
