@@ -51,7 +51,7 @@ type rpcTxBroadcaster interface {
 
 	// TODO: implement commit and async as well
 	// BroadcastTxCommit(context.Context, tmtypes.Tx) (*ctypes.ResultBroadcastTxCommit, error)
-	// BroadcastTxAsync(context.Context, tmtypes.Tx) (*ctypes.ResultBroadcastTx, error)
+	BroadcastTxAsync(context.Context, tmtypes.Tx) (*ctypes.ResultBroadcastTx, error)
 }
 
 // broadcastTx broadcasts a TX and then waits for the TX to be included in the block.
@@ -69,7 +69,7 @@ func broadcastTx(
 	// need to investigate if this will leave the tx
 	// in the mempool or we can retry the broadcast at that
 	// point
-	syncRes, err := broadcaster.BroadcastTxSync(ctx, tx)
+	syncRes, err := broadcaster.BroadcastTxAsync(ctx, tx)
 	if err != nil {
 		errRes := CheckTendermintError(err, tx)
 		if errRes != nil {
