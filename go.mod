@@ -3,7 +3,7 @@ module github.com/strangelove-ventures/lens
 go 1.17
 
 require (
-	github.com/Stride-Labs/stride v0.0.2
+	github.com/Stride-Labs/stride v0.0.5
 	github.com/avast/retry-go/v4 v4.0.4
 	github.com/cosmos/cosmos-sdk v0.45.4
 	github.com/cosmos/go-bip39 v1.0.0
