@@ -118,7 +118,7 @@ func (cc *ChainClient) SendMsgs(ctx context.Context, msgs []sdk.Msg) (*sdk.TxRes
 		return nil, err
 	}
 
-	panic("LENS | TX BROADCASTED")
+	// panic("LENS | TX BROADCASTED")
 
 	// transaction was executed, log the success or failure using the tx response code
 	// NOTE: error is nil, logic should use the returned error to determine if the
