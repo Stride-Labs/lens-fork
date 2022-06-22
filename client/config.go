@@ -149,3 +149,40 @@ func GetGaiaTestnetConfig(keyHome string, debug bool) *ChainClientConfig {
 		SignModeStr:    "direct",
 	}
 }
+
+
+func GetStrideLocalConfig(keyHome string, debug bool) *ChainClientConfig {
+	return &ChainClientConfig{
+		Key:            "stridekey",
+		ChainID:        "STRIDE",
+		RPCAddr:        "http://localhost:26657",
+		GRPCAddr:       "http://localhost:9090",
+		AccountPrefix:  "stride",
+		KeyringBackend: "test",
+		GasAdjustment:  1.2,
+		GasPrices:      "1ustrd",
+		KeyDirectory:   keyHome,
+		Debug:          debug,
+		Timeout:        "20s",
+		OutputFormat:   "json",
+		SignModeStr:    "direct",
+	}
+}
+
+func GetGaiaLocalConfig(keyHome string, debug bool) *ChainClientConfig {
+	return &ChainClientConfig{
+		Key:            "gaiakey",
+		ChainID:        "GAIA",
+		RPCAddr:        "http://localhost:26557",
+		GRPCAddr:       "http://localhost:9080",
+		AccountPrefix:  "cosmos",
+		KeyringBackend: "test",
+		GasAdjustment:  1.2,
+		GasPrices:      "1uatom",
+		KeyDirectory:   keyHome,
+		Debug:          debug,
+		Timeout:        "20s",
+		OutputFormat:   "json",
+		SignModeStr:    "direct",
+	}
+}
