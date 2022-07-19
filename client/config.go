@@ -150,7 +150,6 @@ func GetGaiaTestnetConfig(keyHome string, debug bool) *ChainClientConfig {
 	}
 }
 
-
 func GetStrideLocalConfig(keyHome string, debug bool) *ChainClientConfig {
 	return &ChainClientConfig{
 		Key:            "stridekey",
@@ -179,6 +178,24 @@ func GetGaiaLocalConfig(keyHome string, debug bool) *ChainClientConfig {
 		KeyringBackend: "test",
 		GasAdjustment:  1.2,
 		GasPrices:      "1uatom",
+		KeyDirectory:   keyHome,
+		Debug:          debug,
+		Timeout:        "20s",
+		OutputFormat:   "json",
+		SignModeStr:    "direct",
+	}
+}
+
+func GetJunoLocalConfig(keyHome string, debug bool) *ChainClientConfig {
+	return &ChainClientConfig{
+		Key:            "junokey",
+		ChainID:        "JUNO",
+		RPCAddr:        "http://localhost:24657",
+		GRPCAddr:       "http://localhost:9030",
+		AccountPrefix:  "juno",
+		KeyringBackend: "test",
+		GasAdjustment:  1.2,
+		GasPrices:      "1ujuno",
 		KeyDirectory:   keyHome,
 		Debug:          debug,
 		Timeout:        "20s",
