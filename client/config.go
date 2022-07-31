@@ -203,3 +203,21 @@ func GetJunoLocalConfig(keyHome string, debug bool) *ChainClientConfig {
 		SignModeStr:    "direct",
 	}
 }
+
+func GetOsmoLocalConfig(keyHome string, debug bool) *ChainClientConfig {
+	return &ChainClientConfig{
+		Key:            "osmokey",
+		ChainID:        "OSMO",
+		RPCAddr:        "http://localhost:23657",
+		GRPCAddr:       "http://localhost:9040",
+		AccountPrefix:  "osmo",
+		KeyringBackend: "test",
+		GasAdjustment:  1.2,
+		GasPrices:      "1uosmo",
+		KeyDirectory:   keyHome,
+		Debug:          debug,
+		Timeout:        "20s",
+		OutputFormat:   "json",
+		SignModeStr:    "direct",
+	}
+}
