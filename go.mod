@@ -11,7 +11,7 @@ require (
 	github.com/gogo/protobuf v1.3.3
 	github.com/google/go-cmp v0.5.8
 	github.com/google/go-github/v43 v43.0.0
-	github.com/jhump/protoreflect v1.12.0
+	github.com/jhump/protoreflect v1.14.1
 	github.com/jsternberg/zap-logfmt v1.2.0
 	github.com/pkg/errors v0.9.1
 	github.com/spf13/cobra v1.4.0
